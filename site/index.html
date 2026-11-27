@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dautmer Contreras · Data portfolio</title>
+  <meta name="description" content="Data Analyst, Power BI Architect, and Data Engineer in Bogotá, Colombia. End-to-end data projects with Databricks, dbt, Terraform, and Power BI.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="canonical" href="https://dautmerco.github.io/">
+  <link rel="alternate" hreflang="en" href="https://dautmerco.github.io/">
+  <link rel="alternate" hreflang="es" href="https://dautmerco.github.io/es/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/styles.css">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dautmer Contreras · Data portfolio">
+  <meta property="og:description" content="Data Analyst, Power BI Architect, and Data Engineer. End-to-end data projects with Databricks, dbt, Terraform, and Power BI.">
+  <meta property="og:url" content="https://dautmerco.github.io/">
+  <meta property="og:image" content="https://dautmerco.github.io/assets/img/secop-dashboard.png">
+</head>
+<body>
+  <header class="hero wrap">
+    <nav class="top" aria-label="Site">
+      <span class="mark" aria-hidden="true">DC</span>
+      <a class="lang" href="es/" hreflang="es" lang="es">Español</a>
+    </nav>
+    <p class="eyebrow">Bogotá, Colombia</p>
+    <h1>Dautmer Contreras</h1>
+    <p class="roles"><span class="role">Data Analyst</span> <span class="sep">·</span> <span class="role">Power BI Architect</span> <span class="sep">·</span> <span class="role">Data Engineer</span></p>
+    <p class="lead">I work across the whole path of data: I build the pipelines, model the data, and design the reports and analyses that teams use to make decisions. Three years of experience in fintech and Business Intelligence consulting.</p>
+    <p class="links">
+      <a class="btn" href="#projects">See projects</a>
+      <a class="btn ghost" href="https://github.com/DautmerCo">GitHub</a>
+      <a class="btn ghost" href="https://www.linkedin.com/in/dautmer-contreras">LinkedIn</a>
+    </p>
+  </header>
+
+  <main>
+    <section class="wrap" id="what">
+      <h2>What I do</h2>
+      <ul class="grid4">
+        <li>
+          <h3>Analytics</h3>
+          <p>SQL and Python analyses for risk, growth, and operations teams: cohorts, acquisition funnels, and segmentation.</p>
+        </li>
+        <li>
+          <h3>BI architecture</h3>
+          <p>Power BI semantic models, star schemas, and dashboards for business teams and consulting clients.</p>
+        </li>
+        <li>
+          <h3>Data engineering</h3>
+          <p>Pipelines on Databricks with dbt, Terraform, and CI/CD, built and tested like software.</p>
+        </li>
+        <li class="next">
+          <h3>Data science <span class="badge">Next</span></h3>
+          <p>I'm studying for a B.S. in Data Science at Universidad de La Salle. Machine learning is where my next projects are heading.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="wrap" id="projects">
+      <h2>Projects</h2>
+
+      <article class="project">
+        <a class="shot" href="assets/img/secop-dashboard.png">
+          <img src="assets/img/secop-dashboard.png" width="1734" height="808" loading="lazy"
+               alt="AI/BI dashboard of Colombian public contracts: totals, award method by purchase type, contracts by procurement modality, value by department, and the largest contracts.">
+        </a>
+        <div class="body">
+          <p class="meta">2026 · Colombian government open data</p>
+          <h3><a href="https://github.com/DautmerCo/lakehouse-secop-cicd">Public procurement lakehouse (SECOP II) with CI/CD</a></h3>
+          <p>A daily pipeline on Colombia's public procurement data, from the public API to a dashboard. Terraform declares the infrastructure, dbt runs in a Docker image, and every pull request is tested in ephemeral schemas before it reaches production.</p>
+          <div class="finding">
+            <p class="finding-label">Finding</p>
+            <div class="stats">
+              <div><strong>71.8%</strong><span>of ~198,000 contracts were awarded directly, without a competitive process</span></div>
+              <div><strong>31.8%</strong><span>of the total contract value went through direct awards</span></div>
+            </div>
+            <p>Direct awards dominate by count, not by money. Most are individual service contracts, which the law allows to be awarded directly; large contracts mostly go through competitive processes.</p>
+          </div>
+          <ul class="tags" aria-label="Tools">
+            <li>Databricks</li><li>dbt</li><li>Terraform</li><li>Docker</li><li>GitHub Actions</li><li>Unity Catalog</li>
+          </ul>
+          <a class="more" href="https://github.com/DautmerCo/lakehouse-secop-cicd">View repository →</a>
+        </div>
+      </article>
+
+      <article class="project">
+        <a class="shot" href="assets/img/credit-risk-cohorts.png">
+          <img src="assets/img/credit-risk-cohorts.png" width="1315" height="769" loading="lazy"
+               alt="Power BI cohort report: share of balance 30+ days past due by disbursement month and loan age, with the July to November 2025 cohorts highlighted.">
+        </a>
+        <div class="body">
+          <p class="meta">2026 · Synthetic data</p>
+          <h3><a href="https://github.com/DautmerCo/lakehouse-riesgo-credito">Credit risk lakehouse on Databricks</a></h3>
+          <p>An end-to-end medallion pipeline for a consumer loan portfolio: incremental ingestion with Auto Loader, data quality rules with quarantine tables, a customer history dimension (SCD Type 2), and a Power BI report on cohorts and delinquency.</p>
+          <div class="finding">
+            <p class="finding-label">Finding</p>
+            <div class="stats">
+              <div><strong>7.4–9.7%</strong><span>of balance 30+ days past due at 6 months for loans disbursed Jul–Nov 2025, after the credit policy was loosened</span></div>
+              <div><strong>2.7–6.4%</strong><span>for the earlier cohorts</span></div>
+            </div>
+            <p>The total portfolio hides the effect; only the cohort view makes it visible. <span class="note">The data is synthetic, and the policy effect was seeded in the simulator so the analysis had something to find.</span></p>
+          </div>
+          <ul class="tags" aria-label="Tools">
+            <li>Databricks</li><li>PySpark</li><li>Delta Lake</li><li>Asset Bundles</li><li>Power BI</li>
+          </ul>
+          <a class="more" href="https://github.com/DautmerCo/lakehouse-riesgo-credito">View repository →</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="wrap" id="stack">
+      <h2>Stack</h2>
+      <dl class="stack">
+        <dt>Languages</dt><dd>SQL, Python (PySpark, pandas), DAX</dd>
+        <dt>Data platforms</dt><dd>Databricks, Snowflake, Microsoft Fabric, SQL Server</dd>
+        <dt>Transformation and orchestration</dt><dd>dbt, Lakeflow Jobs, Azure Data Factory, GitHub Actions</dd>
+        <dt>Engineering practices</dt><dd>Terraform, Docker, Git, CI/CD, data quality testing</dd>
+        <dt>BI</dt><dd>Power BI (semantic models, DAX, Power Query), Tableau, MicroStrategy</dd>
+      </dl>
+    </section>
+
+    <section class="wrap" id="certifications">
+      <h2>Certifications</h2>
+      <ul class="certs">
+        <li>Data Engineer Associate<small>Databricks</small></li>
+        <li>Fabric Data Engineer Associate (DP-700)<small>Microsoft</small></li>
+        <li>Fabric Analytics Engineer Associate (DP-600)<small>Microsoft</small></li>
+        <li>SQL AI Developer Associate (DP-800)<small>Microsoft</small></li>
+        <li>Power BI Data Analyst Associate (PL-300)<small>Microsoft</small></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p>Want to talk? Find me on <a href="https://www.linkedin.com/in/dautmer-contreras">LinkedIn</a>.</p>
+      <p>Plain HTML and CSS, published to GitHub Pages with GitHub Actions. <a href="https://github.com/DautmerCo/dautmerco.github.io">Source</a></p>
+    </div>
+  </footer>
+</body>
+</html>
